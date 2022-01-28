@@ -10,4 +10,4 @@ See: https://codegem.notion.site/Engineering-Challenge-fb62fc4e542d462da61e064de
 
 ### Submission
 
-- Please upload your submission here, and send an email to [stephanie@codegem.app](mailto:stephanie@codegem.app) to confirm you are finished.
+<!-- - Please upload your submission here, and send an email to [stephanie@codegem.app](mailto:stephanie@codegem.app) to confirm you are finished. -->
