@@ -37,7 +37,7 @@ app.post("/feedback", (req, res) => {
 app.post("/codegem", (req, res) => {
    
     let data ={
-        //response_type:"in_channel",
+        "response_type":"in_channel",
        // text:JSON.stringify({txt:"yyy"}),
        "blocks": [
         {
