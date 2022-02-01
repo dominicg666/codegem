@@ -37,44 +37,36 @@ app.post("/feedback", (req, res) => {
 app.post("/codegem", (req, res) => {
    
     let data ={
-        "response_type":"in_channel",
+       // "response_type":"in_channel",
        // text:JSON.stringify({txt:"yyy"}),
-       "blocks": [
-        {
-            "type": "image",
-            "title": {
-                "type": "plain_text",
-                "text": "",
-                "emoji": true
-            },
-            "image_url": "https://uploads-ssl.webflow.com/611c73a7fe616fe220cdf89d/61232ce22c6c8c9078f9b2a2_https%253A%252F%252Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%252Fpublic%252Fimages%252F9db01257-97f3-469c-b462-7ca1082cf5dd_1142x332.png",
-            "alt_text": "marg"
-        },
-        {
-            "type": "actions",
-            "block_id": "actionblock789",
-            "elements": [
-                {
-                    "type": "button",
-                    "text": {
-                        "type": "plain_text",
-                        "text": "Give Feedback"
+       
+        "blocks": [
+            {
+                "type": "actions",
+                "block_id": "actionblock789",
+                "elements": [
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "text": "Give Feedback"
+                        },
+                        "style": "primary",
+                        "value": "click_me_456"
                     },
-                    "style": "primary",
-                    "value": "click_me_456"
-                },
-                {
-                    "type": "button",
-                    "text": {
-                        "type": "plain_text",
-                        "text": "My Codegem"
-                    },
-                    "style": "primary",
-                    "value": "click_me_456"
-                }
-            ]
-        }
-    ]
+                    {
+                        "type": "button",
+                        "text": {
+                            "type": "plain_text",
+                            "text": "My Codegem"
+                        },
+                        "style": "primary",
+                        "value": "click_me_456"
+                    }
+                ]
+            }
+        ]
+    
     }
     return res.json(data)
 });
