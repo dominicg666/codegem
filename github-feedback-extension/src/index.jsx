@@ -140,14 +140,10 @@ let listener = div.addEventListener("click", (e) => {
     }
 });
 
-let buttonListener=button.addEventListener("click",(e)=>{
-    
-    if(e.target.id.indexOf("actionId-0")>=0){
-        div.style.transform = "transform 0.3s ease-in";
-        buttonListener.removeEventListener("click", buttonListener);
-    } //actionId-0
+document.getElementById("actionId-0").onclick=function(){
+    div.style.transform = "transform 0.3s ease-in";
     e.preventDefault();
-})
+}
 
 document.body.appendChild(div);
 
