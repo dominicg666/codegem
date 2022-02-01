@@ -42,6 +42,11 @@ app.post("/codegem", (req, res) => {
        
         "blocks": [
             {
+                "type": "image",
+                "image_url": "https://uploads-ssl.webflow.com/611c73a7fe616fe220cdf89d/61232cf6994dae96c6a51d87_codegem-logo.png?w=450&ssl=1",
+                "alt_text": "inspiration"
+            },
+            {
                 "type": "actions",
                 "block_id": "actionblock789",
                 "elements": [
