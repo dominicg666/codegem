@@ -129,7 +129,7 @@ div.style.right = "10px";
 div.style.zIndex = "999";
 div.style.maxHeight = "90vh";
 div.style.height = "700px";
-div.style.transition = "transform 0.3s ease-in";
+div.style.transition = "translateX(370px)";
 div.style.fontFamily = `'Roboto'`;
 
 // allow user to dismiss the feedback form
@@ -139,6 +139,15 @@ let listener = div.addEventListener("click", (e) => {
         div.removeEventListener("click", listener);
     }
 });
+
+let buttonListener=button.addEventListener("click",(e)=>{
+    
+    if(e.target.id.indexOf("actionId-0")>=0){
+        div.style.transform = "transform 0.3s ease-in";
+        buttonListener.removeEventListener("click", buttonListener);
+    } //actionId-0
+    e.preventDefault();
+})
 
 document.body.appendChild(div);
 

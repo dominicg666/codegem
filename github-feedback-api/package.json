@@ -16,7 +16,8 @@
     "start": "node index.js",
     "lint": "eslint . --ext .js",
     "docker": "docker-compose up --build",
-    "docker-detached": "docker-compose up --build -d"
+    "docker-detached": "docker-compose up --build -d",
+    "stop": "docker-compose down"
   },
   "devDependencies": {
     "eslint": "^7.20.0"

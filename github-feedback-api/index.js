@@ -35,6 +35,7 @@ app.post("/feedback", (req, res) => {
 });
 
 app.post("/codegem", (req, res) => {
+
    
     let data ={
        // "response_type":"in_channel",
@@ -57,7 +58,8 @@ app.post("/codegem", (req, res) => {
                             "text": "Give Feedback"
                         },
                         "style": "primary",
-                        "value": "click_me_456"
+                        "value": "click_me_456",
+			    		"action_id": "actionId-0"
                     },
                     {
                         "type": "button",
@@ -66,7 +68,8 @@ app.post("/codegem", (req, res) => {
                             "text": "My Codegem"
                         },
                         "style": "primary",
-                        "value": "click_me_456"
+                        "value": "click_me_456",
+			    		"action_id": "actionId-1"
                     }
                 ]
             }
