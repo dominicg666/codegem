@@ -11,23 +11,22 @@ const APPROVED_ORIGINS = new Set([
 "http://localhost:8080",
 "https://api.slack.com",
 "https://app.slack.com",
-"http://192.168.173.78:3000",
-"http://192.168.173.78"
+"http://ec2-54-162-90-147.compute-1.amazonaws.com"
 ]);
 
 app.use(express.json());
-// app.use(cors({
-//     origin: 
-//     (origin, callback) => {
-//         let allowed = APPROVED_ORIGINS.has(origin);
+app.use(cors({
+    origin: 
+    (origin, callback) => {
+        let allowed = APPROVED_ORIGINS.has(origin);
 
-//         callback(allowed ? null : new Error("not an allowed origin"), allowed);
-//     }
-//     ,
-//     optionsSuccessStatus: 200
-// }));
+        callback(allowed ? null : new Error("not an allowed origin"), allowed);
+    }
+    ,
+    optionsSuccessStatus: 200
+}));
 
-app.use(cors({credentials: true, origin: true}));
+//app.use(cors({credentials: true, origin: true}));
 
 app.post("/feedback", (req, res) => {
     let service = new FeedbackService();
