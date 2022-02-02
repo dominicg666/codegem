@@ -129,7 +129,8 @@ div.style.right = "10px";
 div.style.zIndex = "999";
 div.style.maxHeight = "90vh";
 div.style.height = "700px";
-div.style.transition = "translateX(370px)";
+div.style.transition = "transform 0.3s ease-in";
+div.style.transform = "translateX(370px)";
 div.style.fontFamily = `'Roboto'`;
 
 // allow user to dismiss the feedback form
@@ -146,8 +147,7 @@ script.innerHTML = `document.addEventListener('click', function(e){
     if(e.target && e.target.getAttribute('data-qa-action-id')== 'actionId-0' 
     || e.target.parentElement.parentElement.attributes['data-qa-action-id'].value=="actionId-0"){
          //do something
-         console.log("element get");
-         document.getElementById("code-gem").style.transform="transform 0.3s ease-in";
+         document.getElementById("code-gem").style.transform="translateX(0px)";
     }
 });`;
 
