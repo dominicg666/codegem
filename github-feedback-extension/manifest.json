@@ -11,7 +11,7 @@
     ],
     "content_scripts": [
       {
-        "matches": ["https://github.com/*","https://api.slack.com/*"],
+        "matches": ["https://github.com/*","https://app.slack.com/*"],
         "js": [ "browser-polyfill.min.js", "index.js"]
       }
     ],

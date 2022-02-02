@@ -140,11 +140,22 @@ let listener = div.addEventListener("click", (e) => {
     }
 });
 
-document.getElementById("actionId-0").onclick=function(){
-    div.style.transform = "transform 0.3s ease-in";
-    e.preventDefault();
-}
+
+var script = document.createElement("script");
+script.innerHTML = `document.addEventListener('click', function(e){
+    if(e.target && e.target.getAttribute('data-qa-action-id')== 'actionId-0' 
+    || e.target.parentElement.parentElement.attributes['data-qa-action-id'].value=="actionId-0"){
+         //do something
+         console.log("element get");
+         document.getElementById("code-gem").style.transform="transform 0.3s ease-in";
+    }
+});`;
+
+
+
+
 
 document.body.appendChild(div);
+document.head.appendChild(script);
 
 ReactDOM.render(<App />, div);
