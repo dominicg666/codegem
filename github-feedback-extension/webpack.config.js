@@ -63,7 +63,7 @@ module.exports = {
             ],
         }),
         new webpack.DefinePlugin({
-            API_URL: JSON.stringify("http://localhost:3000"),
+            API_URL: JSON.stringify("http://ec2-54-162-90-147.compute-1.amazonaws.com"),
             IS_PRODUCTION: JSON.stringify(process.env.NODE_ENV == "production")
         }),
         new ESLintPlugin({
